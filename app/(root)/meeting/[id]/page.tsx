@@ -23,13 +23,13 @@ const Meeting = () => {
     </p>
   );
 
-  
+
   return (
      <main className="h-screen w-full">
       <StreamCall call={call}>
         <StreamTheme>
         {!isSetupComplete ? (
-          <MeetingSetup  />
+          <MeetingSetup setIsSetupComplete={setIsSetupComplete} />
           // 'MeetingSetup'
         ) : (
           <MeetingRoom />
